@@ -30,7 +30,6 @@ void loop()
     microServo.write(0);    //서보모터를 0도까지 회전
     count = count + 1;      // 연속된 감지의 횟수 측정
     delay(1000);
-    
     Sensor2 = analogRead(A0); // 진동감지 센서의 감지 시작
     if (Sensor2<900){    // 진동센서의 값이 900 미만이면 (진동이 발생하면)
       tone(buzzer, 2000, 1000);     // 주파수 2000Hz의 부저를 1000ms동안 발생
