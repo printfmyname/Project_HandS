@@ -43,6 +43,7 @@ void loop()
     microServo.write(120);    //서보모터를 120도까지 회전
     
     delay(1000);
+    
     microServo.write(0);    //서보모터를 0도까지 회전
     
     count = count + 1;      // 연속된 감지의 횟수 측정
@@ -56,6 +57,7 @@ void loop()
       tone(buzzer, 2000, 1000);     // 주파수 2000Hz의 부저를 1000ms동안 발생
       
       delay(100);
+      
     }
     
     else{ 
@@ -63,6 +65,7 @@ void loop()
       noTone(buzzer);
       
       delay(100);
+      
     }
     
   } 
@@ -76,7 +79,11 @@ void loop()
   }
   
   if (count == 5) {       // 5번 반복후에는 10초간 대기 
+  
     delay(10000);
+    
     count = 0;
+    
   }
+  
 }
